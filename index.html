@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body { font-family: 'Arial', sans-serif; }
+        .hero { background: #b0bbc4; padding: 60px 0; }
+        .card { margin-bottom: 20px; }
+        .footer { background-color: #f8f9fa; padding: 20px 0; }
+        .full-description { display: none; } 
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/163/462/large_2x/lla-triangle-letter-logo-design-with-triangle-shape-lla-triangle-logo-design-monogram-lla-triangle-logo-template-with-red-color-lla-triangular-logo-simple-elegant-and-luxurious-logo-vector.jpg" alt="Life's Little Adventure" style="width: 90px; height: auto;">
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal" style="color: rgb(20, 18, 18);">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signInModal" style="color: rgb(18, 11, 11);">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal" style="color: rgb(22, 14, 14);">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">About Me</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Welcome to my personal blog! My name is Xyreen, and I am passionate about sharing my experiences and insights on travel, food, movies, and more. This blog is a reflection of my journey and a platform to connect with like-minded individuals. I believe in the power of storytelling and the beauty of discovering the world around us. Join me as I explore new destinations, savor delicious dishes, enjoy captivating films, and celebrate the joy of bonding with family and friends.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="hero text-center" style="background-image: url('https://i.pinimg.com/736x/24/e0/c4/24e0c4b329903197cd12394563ad73d3.jpg'); background-size: cover; background-position: center; color: rgb(17, 15, 15); text-shadow: 1px 1px 4px rgba(23, 18, 18, 0.7); padding: 40px 0;">
+        <h1>Welcome to Life's Litte Adventure - Your ultimate Guide to Food, Travel, and Everyday Inspiration.</h1>
+        <p>Discover my love for food, travel, and life's simple pleasures as I share my experiences, recipes, and travel tips to inspire your own adventures</p>
+    </section>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?cs=srgb&dl=boat-exotic-freedom-1371360.jpg&fm=jpgg" alt="Post 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Travel Blogs</h5>
+                        <p class="card-text">Discover stunning destinations and travel tips that spark my wanderlust.</p>
+                        <div class="full-description">
+                            <p>"Join me on a journey around the globe as we explore breathtaking landscapes, vibrant cultures, and hidden gems. Whether it's a cozy café in Paris or a hiking trail in the Himalayas, my travel blog offers insights, tips, and personal anecdotes to inspire your wanderlust. Let’s discover together how travel can transform us and create memories that last a lifetime. Ready to embark on your own adventure? Let my stories ignite your passion for exploration! From navigating bustling markets in Marrakech to savoring street food in Bangkok, I'll share the highs and lows of each journey. Expect to find practical travel hacks, packing tips, and recommendations for off-the-beaten-path destinations. Together, we can uncover the beauty of different cultures and the stories that bind us. So grab your passport, and let's wander together, finding adventure in every corner of the world!"</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.qare.fr/wp-content/uploads/2020/02/GettyImages-1125733916-1.jpg" class="card-img-top img-fluid full-screen-img" alt="Post 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Food Blogs</h5>
+                        <p class="card-text">Explore delicious recipes and honest restaurant reviews to inspire your cooking adventures.</p>
+                        <div class="full-description">
+                            <p>"Welcome to a delicious world where flavors meet creativity! My food blog is a celebration of culinary delights, featuring recipes, restaurant reviews, and cooking tips that will tantalize your taste buds. From gourmet dishes to comforting home-cooked meals, there's something for everyone. Join me as we experiment in the kitchen, share family recipes, and uncover the stories behind our favorite foods! Each post will take you on a culinary journey, exploring the history and culture of various cuisines. I’ll also highlight seasonal ingredients and how to make the most of them in your cooking. Whether you're an experienced chef or a kitchen novice, I aim to inspire you to try new flavors and techniques. Together, we can create meals that not only nourish our bodies but also warm our hearts.</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="http://www.travellingking.com/wp-content/uploads/2017/01/shopping-mall-906721_1280.jpg" class="card-img-top img-fluid full-screen-img" alt="Post 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Shopping Blogs</h5>
+                        <p class="card-text">Find the latest trends, shopping hacks, and product reviews for a fun shopping experience.</p>
+                        <div class="full-description">
+                            <p>"Welcome to my shopping blog, your ultimate guide to all things trendy and stylish! From the latest fashion finds to must-have gadgets and home decor, I explore the world of shopping to help you make informed choices. Join me as we navigate seasonal sales, discover unique stores, and share our favorite finds! In addition to reviews and tips, I’ll provide insights on sustainable shopping practices and how to curate a wardrobe that reflects your personal style. Expect to find spotlight features on local artisans and brands that deserve a shout-out. Together, we can embrace the joy of shopping, whether it's online or in-store, while being mindful of our choices. Let's inspire each other to discover new trends and create fabulous spaces that feel like home. You might even feel motivated to share your own shopping adventures through a blog!"</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://s3.scoopwhoop.com/anj2/5d8db84850758d655edc3a02/cd1cbf1e-d392-47f1-91e5-4df2e27dce24.jpg" class="card-img-top img-fluid full-screen-img" alt="Post 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Movie Blogs</h5>
+                        <p class="card-text">Enjoy captivating film reviews and insights from the world of cinema.</p>
+                        <div class="full-description">
+                            <p>"Lights, camera, action! Dive into the world of cinema with my movie blog, where I share reviews, analyses, and behind-the-scenes stories of films that move us. Whether you're a fan of heartwarming dramas, edge-of-your-seat thrillers, or enchanting animations, you'll find something to spark your interest. Join the conversation about the art of storytelling and explore how movies reflect our lives! I’ll discuss the evolution of film genres and highlight underrated films that deserve more attention. Additionally, I’ll share my thoughts on the latest blockbusters and cinematic trends, ensuring you stay updated on what’s worth watching. Let’s celebrate the magic of film together, explore classic favorites, and discover new releases that resonate with our hearts. Who knows? You might just feel inspired to start your own movie blog and join this vibrant community of film lovers!"</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://www.naturaldiamonds.com/wp-content/uploads/2020/07/simon-maage-tXiMrX3Gc-g-unsplash-1-scaled.jpg" class="card-img-top img-fluid full-screen-img" alt="Post 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Bonding with Friends and Family</h5>
+                        <p class="card-text">Discover fun activities and stories to strengthen your relationships with loved ones.</p>
+                        <div class="full-description">
+                            <p>"Family and friends are the heart of our lives, and my blog is dedicated to cherishing those relationships. From fun bonding activities to heartfelt stories, I share ideas and experiences that strengthen our connections. Whether it’s hosting game nights, exploring local attractions, or simply enjoying a cozy movie marathon at home, let’s celebrate the joy of togetherness! I’ll provide creative suggestions for activities that foster deeper relationships, such as DIY projects, themed dinner nights, or outdoor adventures. You’ll also find reflections on personal experiences and lessons learned about friendship and family. Let’s inspire each other to create lasting memories, nurture our connections, and appreciate the people who mean the most to us. Together, we can share stories that celebrate love and togetherness and motivate others to cherish their own relationships."</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://d3tl80hy6t5toy.cloudfront.net/wp-content/uploads/sites/3/2018/06/07135505/2018-06-21-CollegeOrWorkExperienceHighSchool-ThinkstockPhotos-813019744.jpg" class="card-img-top img-fluid full-screen-img" alt="Post 6">
+                    <div class="card-body">
+                        <h5 class="card-title">School Blog</h5>
+                        <p class="card-text">Access study tips and personal experiences to make school life easier and more enjoyable.</p>
+                        <div class="full-description">
+                            <p>"Welcome to my school blog, where education meets inspiration! This space is dedicated to exploring the academic journey, sharing study tips, project ideas, and personal experiences that can help you navigate school life. Join me as we tackle subjects, manage time effectively, and discover ways to make learning enjoyable! I’ll offer insights into the latest educational trends, resources for students of all ages, and advice on balancing schoolwork with extracurricular activities. Expect to find motivational stories from fellow students and practical tips on effective studying, exam preparation, and building a successful academic routine. Together, we can foster a love for learning and create a supportive community that empowers each other to thrive in school. Let’s embark on this educational adventure and inspire one another to reach new heights!"</p>
+                        </div>
+                        <button class="btn btn-primary read-more" onclick="toggleDescription(this)">Read More</button>
+                        <button class="btn btn-secondary see-less" onclick="toggleDescription(this)" style="display: none;">See Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        .full-screen-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+    
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="signInEmail">Email address</label>
+                            <input type="email" class="form-control" id="signInEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signInPassword">Password</label>
+                            <input type="password" class="form-control" id="signInPassword" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                        <hr>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="signUpName">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpEmail">Email</label>
+                            <input type="email" class="form-control" id="signUpEmail" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signUpPassword">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" placeholder="Create a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                            <label class="form-check-label" for="termsCheck">I agree to the <a href="#">Terms and Conditions</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer text-center" style="background-color: #f8f9fa; padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color: black;">Privacy Policy</a></li>
+                        <li><a href="#" style="color:black;">Terms of Service</a></li>
+                        <li><a href="#" style="color: black;">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: <a href="mailto:your-email@example.com" style="color: blue;">mrcdxyrn@gmail.com</a></p>
+                    <p>Phone: <a href="09469253288" style="color: black;">09469253288</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/xyreen.mercado.3?mibextid=ZbWKwL" target="_blank" style="color: black; margin-right: 10px;" title="Facebook">
+                            <i class="fab fa-facebook fa-2x"></i>
+                        </a>
+                        <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_xaaiiiii%2Fprofilecard%2F%3Figsh%3DbzdrOXZxNGx5enVk&h=AT3qGigH7wQRRUvqUePZ1kKNlQp5iYeI5x5-sPoaTjiy65BnCKwb7dLj59ZPt6UZIuJNBi8Oz0UVWXEnCer0lJK2tuMhYVDuuQb3ZNtFh8p8Is7L5DRfUuMxc5Rvui3-JObOMw" target="_blank" style="color: black; margin-right: 10px;" title="Instagram">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="text-muted">&copy; 2024 My Personal Blog. All rights reserved.</p>
+        </div>
+    </footer>
+    
+            <hr class="my-4">
+            <p class="text-muted">&copy; 2024 My Personal Blog. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleDescription(button) {
+            const cardBody = button.parentElement;
+            const fullDescription = cardBody.querySelector('.full-description');
+            const readMoreBtn = cardBody.querySelector('.read-more');
+            const seeLessBtn = cardBody.querySelector('.see-less');
+
+            if (fullDescription.style.display === "none" || fullDescription.style.display === "") {
+                fullDescription.style.display = "block";
+                readMoreBtn.style.display = "none";
+                seeLessBtn.style.display = "inline-block";
+            } else {
+                fullDescription.style.display = "none";
+                readMoreBtn.style.display = "inline-block";
+                seeLessBtn.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
